@@ -55,13 +55,15 @@
   --FILTER-BTN-HOVER-BG-COLOR: hsl(0, 0%, 41%, 0.1);
   --FILTER-BTN-TEXT-COLOR: hsl(0, 0%, 41%, 0.8);
   --FILTER-BTN-BORDER-COLOR: hsl(0, 0%, 41%, 0.8);
+  --GO-TO-TOP-A-BG-COLOR:var(--ZOMATO-RED);
+  --GO-TO-TOP-A-HOVER-BG-COLOR:rgb(224, 53, 70);
+  --GO-TO-TOP-A-SHADOW:rgba(0, 0, 0, 0.16) 0px 0.4rem 0.6rem;
 
   /* * || FIRST ORDER */
   --FIRSTORDER-BG-COLOR: rgb(248, 248, 248);
   --FIRSTORDER-SIZE: 9.3rem;
   --FIRSTORDER-TEXT-COLOR: rgb(54, 54, 54);
   --FIRSTORER-TITLE-COLOR: rgb(28, 28, 28);
-
 
   /* * || TOP BRANDS */
   --TOP-BRAND-CONTAINER-SHADOW: rgba(0, 0, 0, 0.08) 0px 3px 12px;
@@ -393,6 +395,7 @@ body {
 /* * || FIRST ORDER */
 
 .first-order {
+  position: relative;
   padding: var(--BODY-MARGIN);
   background-color: var(--FIRSTORDER-BG-COLOR);
 }
@@ -404,6 +407,56 @@ body {
   color: var(--FIRSTORER-TITLE-COLOR);
 }
 
+.first-order__chev-right-container,
+.first-order__chev-left-container{
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+}
+
+.first-order__chev-right-container{
+  right: 10rem;
+}
+.first-order__chev-left-container {
+  left:10rem;
+}
+
+
+.first-order__chev-right-btn,
+.first-order__chev-left-btn{
+  z-index: 4;
+  cursor: pointer;
+  padding: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid transparent;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px,
+    rgba(0, 0, 0, 0.14) 0px 6px 10px 0px,
+    rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
+}
+
+.first-order__chev-right-btn:is(:hover,:focus-within),
+.first-order__chev-left-btn:is(:hover,:focus-within) {
+  background-color: rgb(248, 248, 248);
+}
+
+.first-order__chev-right-btn:active,
+.first-order__chev-left-btn:active {
+  background-color: rgb(232, 232, 232);
+  border-color: rgb(255, 219, 224);
+}
+
+.first-order__chev-right-btn svg,
+.first-order__chev-left-btn svg {
+  width: 1rem;
+  height: 1rem;
+  color: #000;
+} 
+
 .first-order__ul,
 .top-brands__ul {
   list-style-type: none;
@@ -411,6 +464,7 @@ body {
   gap: 2.2rem;
   overflow-x: auto;
   scrollbar-width: none;
+  scroll-behavior: smooth;
 }
 
 .first-order__li,
@@ -441,10 +495,12 @@ body {
 /* * || TOP BRANDS */
 
 .top-brands {
+  position: relative;
   padding: var(--BODY-MARGIN);
   padding-top: 2rem;
   overflow-x: scroll;
   scrollbar-width: none;
+  
 }
 
 .top-brands__img-container {
@@ -765,8 +821,8 @@ body {
 
 /* * GO TO TOP BTN */
 .main__go-to-top {
-  background-color: var(--ZOMATO-RED);
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 0.4rem 0.6rem;
+  background-color: var(--GO-TO-TOP-A-BG-COLOR);
+  box-shadow: var(--GO-TO-TOP-A-SHADOW);
   position: fixed;
   bottom: 1rem;
   right: 1rem;
@@ -776,12 +832,11 @@ body {
   padding: 1rem;
   text-decoration: none;
   border-radius: 50%;
-
+  z-index: 8;
 }
 
 .main__go-to-top:is(:focus-within, :hover) {
-  background-color: var(--ZOMATO-RED);
-  background-color: rgb(224, 53, 70);
+  background-color: var(--GO-TO-TOP-A-HOVER-BG-COLOR)
 }
 
 .main__go-to-top svg {
