@@ -58,9 +58,17 @@
   <!-- * main -->
   <main class="main">
 
+    <!-- * go to top button -->
+    <a href="#" class="main__go-to-top">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 15.75 7.5-7.5 7.5 7.5" />
+      </svg>
+    </a>
+
     <!-- * path -->
     <section class="path">
-      <p>Home / india / <span>Kochi Restaurants</span> </p>
+      <p> <a href="">Home</a> / <a href="">india</a> / <a href=""><span>Kochi Restaurants</span></a> </p>
     </section>
 
     <!-- * top menu -->
@@ -114,7 +122,7 @@
     </section>
 
     <!-- * first order -->
-    <section class="first-order">
+    <section class="first-order" id="first-order-suggestions">
       <h2 class="first-order__h2 nowrap">Inspiration for your first order</h2>
       <ul class="first-order__ul">
         <li class="first-order__li">
@@ -173,56 +181,56 @@
             <img src="./images/topBrands/kfc.avif" alt="">
           </div>
           <p class="nowrap">KFC</p>
-          <span class="nowrap">44 m</span>
+          <span class="nowrap">44 min</span>
         </li>
         <li class="top-brands__li">
           <div class="top-brands__img-container">
             <img src="./images/topBrands/ottupura.avif" alt="">
           </div>
           <p class="nowrap">Gokul Oottupura</p>
-          <span class="nowrap">44 m</span>
+          <span class="nowrap">20 min</span>
         </li>
         <li class="top-brands__li">
           <div class="top-brands__img-container">
             <img src="./images/topBrands/chiking.avif" alt="">
           </div>
           <p class="nowrap">Chiking</p>
-          <span class="nowrap">44 m</span>
+          <span class="nowrap">30 min</span>
         </li>
         <li class="top-brands__li">
           <div class="top-brands__img-container">
             <img src="./images/topBrands/burgerKing.avif" alt="">
           </div>
           <p class="nowrap">Burger King</p>
-          <span class="nowrap">44 m</span>
+          <span class="nowrap">25 min</span>
         </li>
         <li class="top-brands__li">
           <div class="top-brands__img-container">
             <img src="./images/topBrands/mcDonalds.avif" alt="">
           </div>
           <p class="nowrap">McDonald's</p>
-          <span class="nowrap">44 m</span>
+          <span class="nowrap">15 min</span>
         </li>
         <li class="top-brands__li">
           <div class="top-brands__img-container">
             <img src="./images/topBrands/dominos.avif" alt="">
           </div>
           <p class="nowrap">Dominos</p>
-          <span class="nowrap">44 m</span>
+          <span class="nowrap">22 min</span>
         </li>
         <li class="top-brands__li">
           <div class="top-brands__img-container">
             <img src="./images/topBrands/pizzaHut.avif" alt="">
           </div>
-          <p class="nowrap">Piza Hut</p>
-          <span class="nowrap">44 m</span>
+          <p class="nowrap">Pizza Hut</p>
+          <span class="nowrap">44 min</span>
         </li>
         <li class="top-brands__li">
           <div class="top-brands__img-container">
             <img src="./images/topBrands/thaal.avif" alt="">
           </div>
           <p class="nowrap">Thaal</p>
-          <span class="nowrap">44 m</span>
+          <span class="nowrap">43 min</span>
         </li>
       </ul>
     </section>
@@ -527,6 +535,7 @@
 
   </main>
 
+  <!-- *footer -->
   <footer class="footer">
     <section class="footer__btn-container">
       <h1 class="footer__btns-h1">Explore options near me</h1>
@@ -559,8 +568,8 @@
         <div class="footer__btn-outer-container">
           <div class="footer__inner-btn-container">
             <button>Top restaurant chains</button>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-              class="w-6 h-6 chevdown">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6 chevdown">
               <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
             </svg>
           </div>
@@ -570,8 +579,8 @@
         <div class="footer__btn-outer-container">
           <div class="footer__inner-btn-container">
             <button>cities we deliver to</button>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-              class="w-6 h-6 chevdown">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6 chevdown">
               <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
             </svg>
           </div>
@@ -587,13 +596,11 @@
         <img src="images/zomato.avif" alt="zomato logo" width="140px" height="27px">
         <div>
           <select name="" id="" class="contry">
-            <option value="India">
-              India
-            </option>
+            <option value="India">India</option>
             <option value="UAE">UAE</option>
           </select>
 
-          <select name="" id="" class="language"> 
+          <select name="" id="" class="language">
             <option value="English">English</option>
             <option value="Malayalam">Malayalam</option>
             <option value="Spanish">Spanish</option>
@@ -687,7 +694,8 @@
 
         </div>
         <p class="footer__copyright-text">
-          By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content Policies. All
+          By continuing past this page, you agree to our Terms of Service, Cookie Policy, Privacy Policy and Content
+          Policies. All
           trademarks are properties of their respective owners. 2008-2024 &copy; Zomato™ Ltd. All rights reserved.
 
         </p>
