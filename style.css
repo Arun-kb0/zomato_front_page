@@ -139,8 +139,8 @@ html {
 body {
   overflow-x: hidden;
   overflow-y: scroll;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -150,7 +150,7 @@ body {
   background-color: var(--HEADER-BG-COLOR);
   color: var(--HEADER-FONT-COLOR);
   position: sticky;
-  margin: var(--BODY-MARGIN);
+  padding: var(--BODY-MARGIN);
 }
 
 .header__nav {
@@ -292,7 +292,7 @@ body {
   justify-content: start;
   width: 100%;
   column-gap: 2rem;
-  margin: var(--BODY-MARGIN);
+  padding: var(--BODY-MARGIN);
 }
 
 .top-menu__item-container {
@@ -350,12 +350,12 @@ body {
   top: 0;
   background-color: #fff;
   width: 100%;
-  padding: 2rem 0rem;
+  padding-top: 2.2rem;
+  padding-bottom:2.2rem
 }
 
 
 .filters__item-container {
-  padding: var(--BODY-MARGIN);
   display: flex;
   gap: 1rem;
   display: flex;
@@ -500,7 +500,7 @@ body {
   padding-top: 2rem;
   overflow-x: scroll;
   scrollbar-width: none;
-  
+  background-color: #fff;
 }
 
 .top-brands__img-container {
@@ -534,6 +534,8 @@ body {
   padding: var(--BODY-MARGIN);
   padding-top: 2rem;
   overflow-x: none;
+  background-color: #fff;
+  z-index: 2;
 }
 
 .delivery__container {
